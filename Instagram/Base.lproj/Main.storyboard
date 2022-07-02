@@ -95,10 +95,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="displayNameTextField" destination="Eim-mg-GW1" id="IoA-Bn-ptV"/>
-                        <outlet property="mailAddress" destination="B6y-7I-1an" id="Y4G-KU-o8Z"/>
-                        <outlet property="mailAddressTextField" destination="NQV-j7-NFe" id="W9C-3B-SeG"/>
-                        <outlet property="passwordTextField" destination="NQV-j7-NFe" id="Fqn-0r-Ik0"/>
+                        <outlet property="displayNameTextField" destination="ROW-hv-KHA" id="Y6P-ah-3rO"/>
+                        <outlet property="mailAddressTextField" destination="B6y-7I-1an" id="Thb-3d-wrc"/>
+                        <outlet property="passwordTextField" destination="NQV-j7-NFe" id="v1R-yu-rnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQV-Ep-HKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

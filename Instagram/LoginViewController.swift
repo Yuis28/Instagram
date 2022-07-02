@@ -12,7 +12,8 @@ import SVProgressHUD
 class LoginViewController: UIViewController {
     @IBOutlet weak var mailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var displayNameTextField: NSLayoutConstraint!
+    @IBOutlet weak var displayNameTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class LoginViewController: UIViewController {
                     // アドレスとパスワードでユーザー作成。ユーザー作成に成功すると、自動的にログインする
                     Auth.auth().createUser(withEmail: address, password: password) { authResult, error in
                         if let error = error {
-                            // エラーがあったら原因をprintして、returnすることで以降の処理を実行せずに処理を終了する
+                            //エラーがあったら原因をprintして、returnすることで以降の処理を実行せずに処理を終了する
                             print("DEBUG_PRINT: " + error.localizedDescription)
                             return
                         }
@@ -61,7 +62,7 @@ class LoginViewController: UIViewController {
                         }
                     }
                 }
-    }
+            }
     
     /*
     // MARK: - Navigation
