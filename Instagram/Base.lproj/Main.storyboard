@@ -27,7 +27,7 @@
         <!--Login View Controller-->
         <scene sceneID="5hm-sJ-tX3">
             <objects>
-                <viewController storyboardIdentifier="Login" id="j9k-gp-MVT" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="j9k-gp-MVT" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Dz-Hl-zme">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,14 +63,20 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="ログイン" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLoginButton:" destination="j9k-gp-MVT" eventType="touchUpInside" id="USl-r5-3UU"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baV-Fm-CNF">
-                                <rect key="frame" x="57" y="306" width="300" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baV-Fm-CNF">
+                                <rect key="frame" x="57" y="306" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3wU-y1-zvZ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="アカウント作成" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCreateAccountButton:" destination="j9k-gp-MVT" eventType="touchUpInside" id="71E-AY-bBX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="78u-5U-Myb"/>
@@ -88,6 +94,12 @@
                             <constraint firstItem="B6y-7I-1an" firstAttribute="centerX" secondItem="7Dz-Hl-zme" secondAttribute="centerX" id="zwU-Y1-Fwz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="Eim-mg-GW1" id="IoA-Bn-ptV"/>
+                        <outlet property="mailAddress" destination="B6y-7I-1an" id="Y4G-KU-o8Z"/>
+                        <outlet property="mailAddressTextField" destination="NQV-j7-NFe" id="W9C-3B-SeG"/>
+                        <outlet property="passwordTextField" destination="NQV-j7-NFe" id="Fqn-0r-Ik0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQV-Ep-HKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
