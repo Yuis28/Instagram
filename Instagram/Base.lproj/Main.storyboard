@@ -179,6 +179,36 @@
             </objects>
             <point key="canvasLocation" x="29" y="784"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="KSR-0D-g57">
+            <objects>
+                <viewController storyboardIdentifier="Comment" id="xr9-wb-N0D" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5a-sA-bII">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-HE-Qoc">
+                                <rect key="frame" x="10" y="54" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gIA-W9-FHO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QcQ-HE-Qoc" firstAttribute="top" secondItem="gIA-W9-FHO" secondAttribute="top" constant="10" id="6Mv-Ry-tu1"/>
+                            <constraint firstItem="gIA-W9-FHO" firstAttribute="trailing" secondItem="QcQ-HE-Qoc" secondAttribute="trailing" constant="10" id="C9Y-ve-mEy"/>
+                            <constraint firstItem="QcQ-HE-Qoc" firstAttribute="leading" secondItem="gIA-W9-FHO" secondAttribute="leading" constant="10" id="Ve1-Sw-1xh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="QcQ-HE-Qoc" id="ISG-9O-cCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vw3-zh-WEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="1440"/>
+        </scene>
         <!--Post View Controller-->
         <scene sceneID="M1Z-Tc-RAg">
             <objects>
