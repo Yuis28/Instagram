@@ -46,10 +46,14 @@ class PostTableViewCell: UITableViewCell {
             formatter.dateFormat = "yyyy-MM-dd HH:mm"
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
+        }
             
         //コメントの表示
-        self.commentLabel.text = "\(postData.name!) : \(postData.comment!)"
+        var comments = ""
+        for comment in postData.comment {
+            comments += "\(comment)\n"
         }
+        self.commentLabel.text = comments
         
         //いいね数の表示
         let likeNumber = postData.likes.count

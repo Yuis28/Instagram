@@ -228,7 +228,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="QcQ-HE-Qoc" id="cCu-cY-IKV"/>
+                        <outlet property="commentField" destination="QcQ-HE-Qoc" id="Ikh-fI-NDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vw3-zh-WEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

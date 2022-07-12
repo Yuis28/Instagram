@@ -11,23 +11,22 @@ import SVProgressHUD
 
 class CommentViewController: UIViewController {
     
+    var id = ""
     
     @IBOutlet weak var commentField: UITextField!
     @IBAction func handleCommentPostButton(_ sender: Any) {
         //投稿データの保存場所を定義する
-        let postRef = Firestore.firestore().collection(Const.PostPath).document()
+        let postRef = Firestore.firestore().collection(Const.PostPath).document(id)
         
         //HUDで投稿処理中の表示を開始
         SVProgressHUD.show()
         
         //FireStoreに投稿データを保存する
-        let name = Auth.auth().currentUser?.displayName
-        let postDic = [
-            "name": name!,
-            "comment": self.commentField.text!,
-            "date": FieldValue.serverTimestamp(),
-        ] as [String : Any]
-        postRef.setData(postDic)
+        let name = Auth.auth().currentUser!.displayName!
+        let postDic = "\(String(describing: name)):\(self.commentField.text!)"
+        let updateValue = FieldValue.arrayUnion([postDic])
+        
+        postRef.updateData(["comment": updateValue])
         
         //HUDで投稿完了を表示する
         SVProgressHUD.showSuccess(withStatus: "コメントしました")
