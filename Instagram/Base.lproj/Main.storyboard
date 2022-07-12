@@ -192,17 +192,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM7-MV-IRm">
+                                <rect key="frame" x="57" y="108" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Cwj-Qx-gOF"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCommentPostButton:" destination="xr9-wb-N0D" eventType="touchUpInside" id="6MS-XF-cDi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqz-GL-he2">
+                                <rect key="frame" x="57" y="158" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ZcN-pP-Y3U"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCommentCancelButton:" destination="xr9-wb-N0D" eventType="touchUpInside" id="Mg6-3m-nPp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gIA-W9-FHO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zqz-GL-he2" firstAttribute="centerX" secondItem="o5a-sA-bII" secondAttribute="centerX" id="0DE-hg-5JO"/>
                             <constraint firstItem="QcQ-HE-Qoc" firstAttribute="top" secondItem="gIA-W9-FHO" secondAttribute="top" constant="10" id="6Mv-Ry-tu1"/>
                             <constraint firstItem="gIA-W9-FHO" firstAttribute="trailing" secondItem="QcQ-HE-Qoc" secondAttribute="trailing" constant="10" id="C9Y-ve-mEy"/>
                             <constraint firstItem="QcQ-HE-Qoc" firstAttribute="leading" secondItem="gIA-W9-FHO" secondAttribute="leading" constant="10" id="Ve1-Sw-1xh"/>
+                            <constraint firstItem="NM7-MV-IRm" firstAttribute="centerX" secondItem="o5a-sA-bII" secondAttribute="centerX" id="WvU-ZD-YvV"/>
+                            <constraint firstItem="NM7-MV-IRm" firstAttribute="top" secondItem="QcQ-HE-Qoc" secondAttribute="bottom" constant="20" id="gVI-Ae-vLz"/>
+                            <constraint firstItem="zqz-GL-he2" firstAttribute="top" secondItem="NM7-MV-IRm" secondAttribute="bottom" constant="10" id="hqO-xO-eff"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="commentField" destination="QcQ-HE-Qoc" id="ISG-9O-cCM"/>
+                        <outlet property="textField" destination="QcQ-HE-Qoc" id="cCu-cY-IKV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vw3-zh-WEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
